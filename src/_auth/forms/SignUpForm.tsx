@@ -44,8 +44,8 @@ const SignUpForm = () => {
       })
   
       if(!session){
-        toast({ title: 'Sign in failed. Please try again.'});
-        navigate("/sign-in");
+        toast({ title: "Sign in failed. Please try again.", });
+        navigate("/sign-in"); //advanced
         return;
       }
   

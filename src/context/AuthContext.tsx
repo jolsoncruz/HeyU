@@ -41,7 +41,7 @@ const AuthProvider = ({ children } : { children : React.ReactNode }) => {
                     username: currentAccount.username,
                     email: currentAccount.email,
                     imageUrl: currentAccount.imageUrl,
-                    bio: currentAccount.bio
+                    bio: currentAccount.bio 
                 })
             }
 
@@ -57,8 +57,8 @@ const AuthProvider = ({ children } : { children : React.ReactNode }) => {
 
     useEffect(() => {
         if(
-            //localStorage.getItem('cookieFallback') === null
-            localStorage.getItem('cookieFallback') === '[]'
+            localStorage.getItem('cookieFallback') === '[]' ||
+            localStorage.getItem('cookieFallback') === null
             ) navigate('/sign-in')
 
             checkAuthUser();
@@ -80,6 +80,6 @@ const AuthProvider = ({ children } : { children : React.ReactNode }) => {
     )
 }
 
-export default AuthProvider
+export default AuthProvider;
 
-export const useUserContext = () => useContext(AuthContext)
+export const useUserContext = () => useContext(AuthContext);

@@ -15,12 +15,12 @@ const AuthLayout = () => {
         <img
           src="/assets/images/side-img.svg"
           alt="HayU Jumbotron"
-          className="hidden xl:block h-screen w-1/2 object-cover bg-no-repeat">
-        </img>
+          className="hidden xl:block h-screen w-1/2 object-cover bg-no-repeat"
+        />
       </>
     )}
     </>
-  )
+  );
 }
 
 export default AuthLayout
