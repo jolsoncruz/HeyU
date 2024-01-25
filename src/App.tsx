@@ -3,10 +3,11 @@ import { Routes, Route } from 'react-router-dom';
 import './globals.css';
 import SignInForm from './_auth/forms/SignInForm';
 import SignUpForm from './_auth/forms/SignUpForm';
-import { Home } from './_root/pages';
 import AuthLayout from './_auth/AuthLayout';
 import RootLayout from './_root/RootLayout';
 import { Toaster } from "@/components/ui/toaster"
+
+import { Home, Explore, Saved, AllUsers, CreatePost, EditPost, PostDetails, Profile, UpdateProfile} from './_root/pages';
 
 const App = () => {
   return (
@@ -21,6 +22,14 @@ const App = () => {
             {/* Private Routes */}
             <Route element={<RootLayout />}>
                 <Route index element={<Home />}/>
+                <Route path='/explore' element={<Explore />}/>
+                <Route path='/saved' index element={<Saved />}/>
+                <Route path='/all-users' index element={<AllUsers />}/>
+                <Route path='/create-post' index element={<CreatePost />}/>
+                <Route path='/update-post/:id' index element={<EditPost />}/>
+                <Route path='/posts/:id' index element={<PostDetails />}/>
+                <Route path='/profile/:id/*' index element={<Profile />}/>
+                <Route path='/update-profile/:id/' index element={<UpdateProfile />}/>
             </Route>
         </Routes>
         <Toaster />
