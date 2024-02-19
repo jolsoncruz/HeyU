@@ -1,8 +1,6 @@
-import React from 'react'
-
 const UpdateProfile = () => {
   return (
-    <div>UpdateProfile</div>
+    <div>Coming Soon</div>
   )
 }
 

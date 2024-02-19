@@ -1,8 +1,6 @@
-import React from 'react'
-
 const LikedPosts = () => {
   return (
-    <div>LikedPosts</div>
+    <div>Coming Soon</div>
   )
 }
 
